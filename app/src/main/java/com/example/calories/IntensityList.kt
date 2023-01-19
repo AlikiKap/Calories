@@ -57,9 +57,9 @@ var expanded by remember { mutableStateOf(false) }
                 .onGloballyPositioned { coordinates ->
                     textFieldSize = coordinates.size.toSize()
                 },
-            label = "weight",
-            trailingIcon = Icon(icon,"contentDescription",
-            Modifier.clickable { expanded = !expanded })
+            label = {Text("weight")},
+            trailingIcon = {Icon(icon,"contentDescription",
+                Modifier.clickable { expanded = !expanded })}
         )
     }
 }
